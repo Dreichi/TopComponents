@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+/TopComponentAPI/node_modules
+
 # testing
 /coverage
 
