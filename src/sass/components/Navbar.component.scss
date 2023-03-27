@@ -1,0 +1,184 @@
+.nav {
+    overflow: hidden;
+    background: linear-gradient(90deg, #DF7116 0%, #FF7300 97.92%);
+    @media screen and (min-width: 768px) {
+        background: transparent;
+    }
+    &__options {
+        &--desktop {
+            display: none;
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: end;
+                background-color: black;
+                padding: 12px 64px;
+            }
+        }
+        &--mobile {
+            display: flex;
+            flex-direction: column;
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    &__brands {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 16px;
+        @media screen and (min-width: 768px) {
+            z-index: 999;
+        }
+    }
+    &__brand {
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+    }
+    &__collapse-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        color: white;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+    &__option {
+        color: white;
+        text-decoration: none;
+        i {
+            width: 16px;
+            height: 16px;
+        }
+        &s {
+            &--mobile {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+
+                &--desktop {
+                    display: flex;
+                    gap: 8px;
+                    >:nth-child(1) {
+                        border-right: 1px solid white;
+                        padding-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+    &__link {
+        color: rgba(255, 255, 255, 0.75);
+        font-weight: 400;
+        text-decoration: none;
+        &.active {
+            color: white;
+        }
+        &s {
+            display: none;
+            background: linear-gradient(93.76deg, #DF7116 0%, #FF7300 100%);
+            border: 1px solid #000000;
+            justify-content: space-between;
+            padding: 8px 16px;
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+                background: transparent;
+                border: none;
+                align-items: center;
+                margin-left: auto;
+
+            z-index: 999;
+            }
+            &__wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                    
+                }
+            }
+            &--active {
+                display: flex;
+            }
+        }
+
+    }
+
+    &__container {
+
+
+        @media screen and (min-width: 768px) {
+            position: relative;
+            display: flex;
+            width: calc(100% - 64px);
+            background: linear-gradient(90deg, #DF7116 0%, #FF7300 97.92%);
+            margin: 0 auto;
+            &::before {
+                position: absolute;
+                content: '';
+                left: -70px;
+                width: 100px;
+                height: 41px;
+                top: -29px;
+                z-index: 1;
+                background-color: #DF7116;
+                transform: rotate(45deg);
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                right: -70px;
+                width: 100px;
+                height: 41px;
+                top: -29px;
+                z-index: 1;
+                background-color: #FF7300;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    &__logout {
+        padding: 3px 5px;
+        font-size: 16px;
+        color: #000000;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+        font-style: italic;
+        font-weight: 700;
+
+        @media screen and (max-width: 768px) {
+            height: 50px;
+            transform: translate(0%, 80%);
+        }
+    }
+
+    &__profile {
+        display: flex;
+        @media screen and (max-width: 768px) {
+            transform: translate(540%, -360%);
+        }
+    }
+}

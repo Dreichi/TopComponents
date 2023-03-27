@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "TopComponents",
+    "database": "topcomponents",
+    "host": "212.227.142.41",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "admin",
+    "password": "TopComponents",
+    "database": "topcomponents",
+    "host": "212.227.142.41",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "admin",
+    "password": "TopComponents",
+    "database": "topcomponents",
+    "host": "212.227.142.41",
+    "dialect": "mysql"
+  }
+}
